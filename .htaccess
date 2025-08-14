@@ -1,0 +1,27 @@
+<IfModule mod_mime.c>
+    AddEncoding br .br
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.js\.br$">
+        Header set Content-Encoding br
+        Header set Content-Type application/javascript
+    </FilesMatch>
+    <FilesMatch "\.wasm\.br$">
+        Header set Content-Encoding br
+        Header set Content-Type application/wasm
+    </FilesMatch>
+    <FilesMatch "\.data\.br$">
+        Header set Content-Encoding br
+        Header set Content-Type application/octet-stream
+    </FilesMatch>
+    <FilesMatch "\.symbols\.json\.br$">
+        Header set Content-Encoding br
+        Header set Content-Type application/json
+    </FilesMatch>
+</IfModule>
+
+# --- Restricción por IP ---
+<RequireAll>
+    Require ip 181.124.158.240
+</RequireAll>
