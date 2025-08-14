@@ -23,5 +23,5 @@
 
 # --- Restricción por IP ---
 <RequireAll>
-    Require ip 181.124.158.240
+    Require ip 181.124.158.76
 </RequireAll>
