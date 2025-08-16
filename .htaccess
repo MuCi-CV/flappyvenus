@@ -22,6 +22,7 @@
 </IfModule>
 
 # --- Restricción por IP ---
-<RequireAll>
-    Require ip 181.124.158.76
-</RequireAll>
+<RequireAny>
+    Require ip 181.124.158
+    Require ip 181.120.234.218
+</RequireAny>
